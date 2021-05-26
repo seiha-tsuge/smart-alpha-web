@@ -1,0 +1,13 @@
+{
+    "name": "smart-alpha-web",
+    "dockerComposeFile": ["../docker-compose.yml"],
+    "service": "web",
+    "workspaceFolder": "/app",
+    "settings": {
+      "editor.tabSize": 2,
+    },
+    "extensions": [
+      "octref.vetur",
+    ],
+    "forwardPorts": [3000]
+}
