@@ -1,17 +1,20 @@
 {
-    "name": "smart-alpha-web",
-    "dockerComposeFile": ["../docker-compose.yml"],
-    "service": "web",
-    "workspaceFolder": "/app",
-    "settings": {
-      "editor.tabSize": 2,
-      "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-      }
+  "name": "smart-alpha-web",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "web",
+  "workspaceFolder": "/app",
+  "settings": {
+    "editor.tabSize": 2,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
     },
-    "extensions": [
-      "octref.vetur",
-      "dbaeumer.vscode-eslint"
-    ],
-    "forwardPorts": [3000]
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "extensions": [
+    "octref.vetur",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode"
+  ],
+  "forwardPorts": [3000]
 }
