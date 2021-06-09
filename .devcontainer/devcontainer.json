@@ -16,5 +16,6 @@
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode"
   ],
+  "postCreateCommand": "apk update && apk add git",
   "forwardPorts": [3000]
 }
