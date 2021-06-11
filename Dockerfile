@@ -1,4 +1,4 @@
-FROM node:14.17.0-alpine
+FROM mcr.microsoft.com/vscode/devcontainers/javascript-node:14
 
 WORKDIR /app
 
@@ -7,4 +7,4 @@ RUN yarn
 
 COPY . /app
 
-CMD ["/bin/ash"]
+CMD ["/bin/bash"]
