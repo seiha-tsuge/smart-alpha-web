@@ -15,8 +15,10 @@
   "extensions": [
     "octref.vetur",
     "dbaeumer.vscode-eslint",
+    "stylelint.vscode-stylelint",
     "esbenp.prettier-vscode",
-    "stylelint.vscode-stylelint"
+    "ms-vsliveshare.vsliveshare"
   ],
+  "postCreateCommand": "yarn install && apt update && apt install -y git",
   "forwardPorts": [3000]
 }
