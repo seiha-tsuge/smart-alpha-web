@@ -6,7 +6,8 @@
   "settings": {
     "editor.tabSize": 2,
     "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
+      "source.fixAll.eslint": true,
+      "source.fixAll.stylelint": true
     },
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -15,7 +16,8 @@
     "octref.vetur",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
-    "ms-vsliveshare.vsliveshare"
+    "ms-vsliveshare.vsliveshare",
+    "stylelint.vscode-stylelint"
   ],
   "postCreateCommand": "yarn install && apt update && apt install -y git",
   "forwardPorts": [3000]
