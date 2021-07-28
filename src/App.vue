@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <header class="header">あ</header>
-    <div class="sidebar">い</div>
+    <aside class="sidebar">い</aside>
     <main class="main">う</main>
   </div>
 </template>
@@ -17,23 +17,41 @@ export default defineComponent({
 <style scoped>
 .container {
   display: grid;
+  grid-template:
+    'header header' 56px
+    'sidebar main' 1fr / 240px 1fr;
   width: 100vw;
   height: 100vh;
-  grid-template-columns: auto;
-  grid-template-rows: 50px 1fr;
 }
 
 .header {
+  grid-area: header;
   background-color: red;
-  grid-column-start: 1;
-  grid-column-end: 3;
 }
 
 .sidebar {
+  grid-area: sidebar;
   background-color: yellow;
 }
 
 .main {
+  grid-area: main;
   background-color: blue;
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    grid-template:
+      'header' 56px
+      'main' 1fr / 1fr;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    z-index: var(--z-index-sidebar);
+    width: 75%;
+    height: 100vh;
+  }
 }
 </style>
