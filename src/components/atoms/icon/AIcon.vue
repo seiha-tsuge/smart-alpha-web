@@ -1,26 +1,30 @@
 <template>
-  <i class="material-icons-outlined" :class="[colors[color], size[size]]">{{
-    icon
-  }}</i>
+  <i class="material-icons-outlined" :class="[colors[color], sizes[size]]">
+    {{ icon }}
+  </i>
 </template>
 
 <script lang="ts">
+import type { PropType } from 'vue';
 import { defineComponent } from 'vue';
+
+type Color = 'primary' | 'default';
+type Size = 'default' | 'small' | 'large';
 
 export default defineComponent({
   name: 'AIcon',
   props: {
     icon: {
-      type: String,
+      type: String as PropType<string>,
       required: true,
     },
     color: {
-      type: String,
+      type: String as PropType<Color>,
       default: 'default',
     },
     size: {
-      type: String,
-      default: 'lg',
+      type: String as PropType<Size>,
+      default: 'small',
     },
   },
 });
@@ -35,14 +39,14 @@ export default defineComponent({
 }
 </style>
 
-<style module="size">
-.sm {
-  font-size: 24px;
+<style module="sizes">
+.small {
+  font-size: 1rem !important;
 }
-.md {
-  font-size: 36px;
+.default {
+  font-size: 1.5rem;
 }
-.lg {
-  font-size: 48px;
+.large {
+  font-size: 2.25rem !important;
 }
 </style>
