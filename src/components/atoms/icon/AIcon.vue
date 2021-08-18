@@ -41,12 +41,12 @@ export default defineComponent({
 
 <style module="sizes">
 .small {
-  font-size: 1rem !important;
+  font-size: 1.6rem !important;
 }
 .default {
-  font-size: 1.5rem;
+  font-size: 2.4rem;
 }
 .large {
-  font-size: 2.25rem !important;
+  font-size: 3.6rem !important;
 }
 </style>
