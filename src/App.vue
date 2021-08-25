@@ -1,6 +1,6 @@
 <template>
   <LayoutContainer>
-    <LayoutHeader></LayoutHeader>
+    <Header />
     <LayoutSidebar></LayoutSidebar>
     <LayoutMain></LayoutMain>
   </LayoutContainer>
@@ -9,7 +9,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import LayoutContainer from './components/layout/LayoutContainer.vue';
-import LayoutHeader from './components/layout/LayoutHeader.vue';
+import Header from './components/organisms/Header.vue';
 import LayoutSidebar from './components/layout/LayoutSidebar.vue';
 import LayoutMain from './components/layout/LayoutMain.vue';
 
@@ -17,7 +17,7 @@ export default defineComponent({
   name: 'App',
   components: {
     LayoutContainer,
-    LayoutHeader,
+    Header,
     LayoutSidebar,
     LayoutMain,
   },
