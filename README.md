@@ -16,55 +16,38 @@
 
 ### 1-1. Visual Studio Code の拡張機能
 
-Visual Studio Code を利用する場合は、以下の拡張機能をインストールします。
+Visual Studio Code に、以下の拡張機能をインストールします。
 
 | 拡張機能                                                                                                               | インストール条件 |
 | ---------------------------------------------------------------------------------------------------------------------- | ---------------- |
-| [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)                                   | 任意             |
+| [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)                                   | 必須             |
+| [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)                | 必須             |
+| [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)                                       | 必須             |
 | [Vite](https://marketplace.visualstudio.com/items?itemName=antfu.vite)                                                 | 任意             |
-| [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)                                       | 任意             |
+| [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)                | 任意             |
 | [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) | 任意             |
-
----
 
 ## 2. 実行
 
-コマンドの実行は、WorkingCopy のルートディレクトリでおこないます。
+コマンドの実行は、ルートディレクトリで行います。
 
-### 2-1. `yarn` を使う場合
-
-#### 2-1-1. 依存関係を構築する
+### 2-1. 依存関係を構築する
 
 ```bash
 # install dependencies
 $ yarn install
 ```
 
-#### 2-1-2. プログラムを実行する
+#### 2-2. プログラムを実行する
 
 以下のコマンドを実行した後、 http://localhost:3000 にアクセスすると、開発中のプログラムを確認する事ができます。
 
-##### 2-1-2-1. 通常
+##### 2-2-1. ローカルサーバーを起動する
 
 ```bash
 # serve with hot reload at localhost:3000
 $ yarn dev
 ```
-
-##### 2-1-2-2. 軽量モード
-
-開発用ローカルサーバが重い場合、以下のようにアクセシビリティチェック(vue-axe)を無効にして、起動できます。
-
-```bash
-# serve with hot reload at localhost:3000
-$ yarn dev-no-axe
-```
-
-#### 2-1-3. トラブルシュート
-
-##### 2-1-3-1. `Cannot find module ****` と怒られた時
-
-再度、依存関係を構築し直し、プログラムを実行します。
 
 ### 2-2. `docker compose` を使う場合
 
@@ -88,17 +71,6 @@ $ docker-compose up --build
 $ docker-compose run --rm app yarn install
 ```
 
-### 2-3. `Vagrant` を使う場合
-
-#### 2-3-1. 依存関係を構築し、プログラムを実行する
-
-以下のコマンドを実行した後、 http://localhost:3000 にアクセスすると、開発中のプログラムを確認する事ができます。
-
-```bash
-# serve with hot reload at localhost:3000
-$ vagrant up
-```
-
 ### 2-4. Visual Studio Code + Remote Containers で開発する場合
 
 #### 2-4-1. 依存関係を構築し、プログラムを実行する
@@ -114,22 +86,10 @@ $ vagrant up
   詳細な手順は、[Managing extensions (外部サイト)](https://code.visualstudio.com/docs/remote/containers#_managing-extensions)を参照してください。
 - 開発環境を再構築する場合は、左下部の「Rebuild Container」を実行してください。
 
-### 2-5. Gitpod で開発する場合
-
-以下のボタンを押し、GitHub アカウント認証をすると、自動的にリモート開発環境のセットアップが行われます。
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/tokyo-metropolitan-gov/covid19)
-
-無償ユーザーは月 50 時間まで利用できます。
-
----
-
 ## 3. 本番環境/その他の判定
 
 `process.env.GENERATE_ENV` の値が、本番の場合は`'production'`に、それ以外の場合は `'development'` になっています。
 テスト環境のみで実行したい処理がある場合は、こちらの値をご利用ください。
-
----
 
 ## 4. ステージング・本番環境への反映
 
@@ -140,8 +100,6 @@ $ vagrant up
 | `master`      | `production`                             | 本番サイト https://stopcovid19.metro.tokyo.lg.jp/         |
 | `staging`     | `gh-pages`                               | ステージングサイト https://stg-covid19-tokyo.netlify.app/ |
 | `development` | `dev-pages`                              | 開発用サイト https://dev-covid19-tokyo.netlify.app/       |
-
----
 
 ## 5. ブランチルール
 
@@ -168,24 +126,6 @@ Pull Request を送る際のブランチは、以下のネーミングルール�
 | 本番サイト HTML         | production     | https://stopcovid19.metro.tokyo.lg.jp/ | 静的ビルドされた HTML が置いてある場所 |
 | ステージングサイト HTML | gh-pages       | https://stg-covid19-tokyo.netlify.app/ | 静的ビルドされた HTML が置いてある場所 |
 | OGP 作業用              | deploy/new_ogp | なし                                   | OGP の更新用                           |
-
----
-
-## 6. `data` ディレクトリ以下の JSON データについて
-
-### 6-1. データの構造が変わったとき、またはデータが追加されたときは
-
-次のコマンドで、自動生成しているコード（`libraries/auto_generated` 以下のファイル）を再生成してください。
-
-```bash
-$ yarn generate-data-converters
-```
-
-また、このとき自動生成された interface の定義が変更されます。必要に応じて各コンポーネントの実装を修正してください。
-
-JSON の構造に変化がなくデータだけ更新された場合は、コマンドを実行する必要はありません。
-
----
 
 ## 7. 依存性の管理
 
