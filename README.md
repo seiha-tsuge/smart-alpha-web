@@ -8,12 +8,12 @@
 
 以下のアプリケーションをインストールします。
 
-| アプリケーション名                                   | バージョン   | インストール条件                                             |
-| ---------------------------------------------------- | ------------ | ------------------------------------------------------------ |
-| [Node.js](https://nodejs.org/ja/)                    | 14.17.0 以上 | 必須                                                         |
-| [Visual Studio Code](https://code.visualstudio.com/) |              | [ローカルで開発する場合](#1-1-visual-studio-code-の拡張機能) |
-| [yarn](https://classic.yarnpkg.com/ja/)              |              | [yarn で実行する場合](#2-1-yarn-を使う場合)                  |
-| [Docker](https://docs.docker.com/get-docker/)        |              | [yarn で実行する場合](#2-1-yarn-を使う場合)                  |
+| アプリケーション名                                   | バージョン   | インストール条件                                                          |
+| ---------------------------------------------------- | ------------ | ------------------------------------------------------------------------- |
+| [Node.js](https://nodejs.org/ja/)                    | 14.17.0 以上 | 必須                                                                      |
+| [Visual Studio Code](https://code.visualstudio.com/) |              | [ローカルで開発する場合](#1-1-visual-studio-code-の拡張機能)              |
+| [yarn](https://classic.yarnpkg.com/ja/)              |              | [yarn で実行する場合](#2-1-yarn-を使う場合)                               |
+| [Docker](https://docs.docker.com/get-docker/)        |              | [Remote Containers で開発する場合](#2-2-Remote-Containers-で開発する場合) |
 
 ### 1-1. Visual Studio Code の拡張機能
 
@@ -50,20 +50,11 @@ $ yarn install
 $ yarn dev
 ```
 
-### 2-2. Visual Studio Code + Remote Containers で開発する場合
+### 2-2. Remote Containers で開発する場合
 
 #### 2-2-1. 依存関係を構築し、プログラムを実行する
 
 [Quick start: Open an existing folder in a container の画像 (外部サイト)](https://code.visualstudio.com/docs/remote/containers#_quick-start-open-an-existing-folder-in-a-container)のように、左下部の「Open Folder in Container」でこのリポジトリのルートを選択すれば、環境構築が始まります。
-
-環境を構築した後に http://localhost:3000 にアクセスすると、開発中のプログラムを確認する事ができます。
-
-#### 2-2-2. Topic
-
-- 設定を変更したい場合は、[devcontainer.json reference (外部サイト)](https://code.visualstudio.com/docs/remote/containers#_devcontainerjson-reference)を参照し、`.devcontainer/devcontainer.json`を変更してください。
-- Remote Container 実行時のみ有効な拡張機能「ESLint」を導入していますが、必要に応じて`.devcontainer/devcontainer.json`の`extensions`に追加してください。
-  詳細な手順は、[Managing extensions (外部サイト)](https://code.visualstudio.com/docs/remote/containers#_managing-extensions)を参照してください。
-- 開発環境を再構築する場合は、左下部の「Rebuild Container」を実行してください。
 
 ## 3. コラボレーター
 
