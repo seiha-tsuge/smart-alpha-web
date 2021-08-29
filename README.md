@@ -36,7 +36,6 @@ Visual Studio Code に、以下の拡張機能をインストールします。
 ### 2-1-1. 依存関係を構築する
 
 ```bash
-# install dependencies
 $ yarn install
 ```
 
@@ -47,30 +46,7 @@ $ yarn install
 ##### 2-2-1. ローカルサーバーを起動する
 
 ```bash
-# serve with hot reload at localhost:3000
 $ yarn dev
-```
-
-### 2-2. `docker compose` を使う場合
-
-#### 2-2-1. 依存関係を構築し、プログラムを実行する
-
-以下のコマンドを実行した後、 http://localhost:3000 にアクセスすると、開発中のプログラムを確認する事ができます。
-
-```bash
-# serve with hot reload at localhost:3000
-$ docker-compose up --build
-```
-
-#### 2-2-2. トラブルシュート
-
-##### 2-2-2-1. `Cannot find module ****` と怒られた時
-
-プログラムを止め、以下のコマンドを実行します。
-
-```bash
-# serve with hot reload at localhost:3000
-$ docker-compose run --rm app yarn install
 ```
 
 ### 2-4. Visual Studio Code + Remote Containers で開発する場合
@@ -120,14 +96,6 @@ Pull Request を送る際のブランチは、以下のネーミングルール�
 | 開発         | development | https://dev-covid19-tokyo.netlify.app/ | 全開発者                 | base branch。基本は、この`development`ブランチに Pull Request を送ってください。 |
 | ステージング | staging     | https://stg-covid19-tokyo.netlify.app/ | 管理者のみ               | 本番前の最終確認用。管理者以外の Pull Request は禁止です。                       |
 | 本番         | master      | https://stopcovid19.metro.tokyo.lg.jp/ | 管理者のみ               | 管理者以外の Pull Request は禁止です。                                           |
-
-### 5-2. システムで利用しているブランチ
-
-| 目的                    | ブランチ       | 確認 URL                               | 備考                                   |
-| ----------------------- | -------------- | -------------------------------------- | -------------------------------------- |
-| 本番サイト HTML         | production     | https://stopcovid19.metro.tokyo.lg.jp/ | 静的ビルドされた HTML が置いてある場所 |
-| ステージングサイト HTML | gh-pages       | https://stg-covid19-tokyo.netlify.app/ | 静的ビルドされた HTML が置いてある場所 |
-| OGP 作業用              | deploy/new_ogp | なし                                   | OGP の更新用                           |
 
 ## 7. 依存性の管理
 
