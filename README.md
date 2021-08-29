@@ -64,3 +64,12 @@ $ yarn dev
 - Remote Container 実行時のみ有効な拡張機能「ESLint」を導入していますが、必要に応じて`.devcontainer/devcontainer.json`の`extensions`に追加してください。
   詳細な手順は、[Managing extensions (外部サイト)](https://code.visualstudio.com/docs/remote/containers#_managing-extensions)を参照してください。
 - 開発環境を再構築する場合は、左下部の「Rebuild Container」を実行してください。
+
+## 3. コラボレーター
+
+以下のメンバーでモブプログラミングにより作成されています
+
+- [Takuya-Akutsu](https://github.com/Takuya-Akutsu)
+- [Seiha Tsuge](https://github.com/seiha-tsuge)
+- [zawa24-ask](https://github.com/zawa24-ask)
+- [Reon Horigami](https://github.com/reon-horigami)
