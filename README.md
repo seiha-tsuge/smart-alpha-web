@@ -19,14 +19,14 @@
 
 Visual Studio Code に、以下の拡張機能をインストールします。
 
-| 拡張機能                                                                                                               | インストール条件 |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------- |
-| [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)                                   | 必須             |
-| [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)                | 必須             |
-| [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)                                       | 必須             |
-| [Vite](https://marketplace.visualstudio.com/items?itemName=antfu.vite)                                                 | 任意             |
-| [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)                | 任意             |
-| [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) | 任意             |
+| 拡張機能                                                                                                               | インストール条件                  |
+| ---------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
+| [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)                                   | 必須                              |
+| [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)                | 必須                              |
+| [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)                                       | 必須                              |
+| [Vite](https://marketplace.visualstudio.com/items?itemName=antfu.vite)                                                 | 任意                              |
+| [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)                | 任意                              |
+| [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) | Remote Development を利用する場合 |
 
 ## 2. 実行
 
