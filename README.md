@@ -1,4 +1,4 @@
-# smart-alpha-web
+# Smart Alpha Web
 
 ## 初めに
 
@@ -8,11 +8,12 @@
 
 以下のアプリケーションをインストールします。
 
-| アプリケーション名                                   | バージョン   |
-| ---------------------------------------------------- | ------------ |
-| [Node.js](https://nodejs.org/ja/)                    | 14.17.0 以上 |
-| [Visual Studio Code](https://code.visualstudio.com/) |              |
-| [yarn](https://classic.yarnpkg.com/ja/)              |              |
+| アプリケーション名                                   | バージョン   | インストール条件                            |
+| ---------------------------------------------------- | ------------ | ------------------------------------------- |
+| [Node.js](https://nodejs.org/ja/)                    | 14.17.0 以上 | 必須                                        |
+| [Visual Studio Code](https://code.visualstudio.com/) |              | 必須                                        |
+| [yarn](https://classic.yarnpkg.com/ja/)              |              | [yarn で実行する場合](#2-1-yarn-を使う場合) |
+| [yarn](https://classic.yarnpkg.com/ja/)              |              | [yarn で実行する場合](#2-1-yarn-を使う場合) |
 
 ### 1-1. Visual Studio Code の拡張機能
 
@@ -49,7 +50,7 @@ $ yarn install
 $ yarn dev
 ```
 
-### 2-4. Visual Studio Code + Remote Containers で開発する場合
+### 2-2. Visual Studio Code + Remote Containers で開発する場合
 
 #### 2-4-1. 依存関係を構築し、プログラムを実行する
 
