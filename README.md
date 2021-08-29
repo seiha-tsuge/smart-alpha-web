@@ -8,12 +8,12 @@
 
 以下のアプリケーションをインストールします。
 
-| アプリケーション名                                   | バージョン   | インストール条件                                          |
-| ---------------------------------------------------- | ------------ | --------------------------------------------------------- |
-| [Node.js](https://nodejs.org/ja/)                    | 14.17.0 以上 | 必須                                                      |
-| [Visual Studio Code](https://code.visualstudio.com/) |              | [yarn で実行する場合](#1-1-visual-studio-code-の拡張機能) |
-| [yarn](https://classic.yarnpkg.com/ja/)              |              | [yarn で実行する場合](#2-1-yarn-を使う場合)               |
-| [Docker](https://docs.docker.com/get-docker/)        |              | [yarn で実行する場合](#2-1-yarn-を使う場合)               |
+| アプリケーション名                                   | バージョン   | インストール条件                                             |
+| ---------------------------------------------------- | ------------ | ------------------------------------------------------------ |
+| [Node.js](https://nodejs.org/ja/)                    | 14.17.0 以上 | 必須                                                         |
+| [Visual Studio Code](https://code.visualstudio.com/) |              | [ローカルで開発する場合](#1-1-visual-studio-code-の拡張機能) |
+| [yarn](https://classic.yarnpkg.com/ja/)              |              | [yarn で実行する場合](#2-1-yarn-を使う場合)                  |
+| [Docker](https://docs.docker.com/get-docker/)        |              | [yarn で実行する場合](#2-1-yarn-を使う場合)                  |
 
 ### 1-1. Visual Studio Code の拡張機能
 
@@ -54,7 +54,7 @@ $ yarn dev
 
 #### 2-2-1. 依存関係を構築し、プログラムを実行する
 
-[Quick start: Try a dev container の画像 (外部サイト)](https://code.visualstudio.com/docs/remote/containers#_quick-start-try-a-dev-container)のように、左下部の「Open Folder in Container」でこのリポジトリのルートを選択すれば、環境構築が始まります。
+[Quick start: Open an existing folder in a container の画像 (外部サイト)](https://code.visualstudio.com/docs/remote/containers#_quick-start-open-an-existing-folder-in-a-container)のように、左下部の「Open Folder in Container」でこのリポジトリのルートを選択すれば、環境構築が始まります。
 
 環境を構築した後に http://localhost:3000 にアクセスすると、開発中のプログラムを確認する事ができます。
 
