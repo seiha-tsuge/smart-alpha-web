@@ -67,7 +67,7 @@ $ yarn dev
 
 ## 3. コラボレーター
 
-以下のメンバーでモブプログラミングにより作成されています
+以下のメンバーで開発しています
 
 - [Takuya-Akutsu](https://github.com/Takuya-Akutsu)
 - [Seiha Tsuge](https://github.com/seiha-tsuge)
