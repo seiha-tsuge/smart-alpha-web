@@ -4,28 +4,25 @@
   </i>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
+import { defineProps } from 'vue';
 import type { PropType } from 'vue';
-import { defineComponent } from 'vue';
 
 type Color = 'primary' | 'default';
 type Size = 'default' | 'small' | 'large';
 
-export default defineComponent({
-  name: 'AIcon',
-  props: {
-    icon: {
-      type: String as PropType<string>,
-      required: true,
-    },
-    color: {
-      type: String as PropType<Color>,
-      default: 'default',
-    },
-    size: {
-      type: String as PropType<Size>,
-      default: 'small',
-    },
+defineProps({
+  color: {
+    type: String as PropType<Color>,
+    default: 'default',
+  },
+  icon: {
+    type: String as PropType<string>,
+    required: true,
+  },
+  size: {
+    type: String as PropType<Size>,
+    default: 'small',
   },
 });
 </script>
