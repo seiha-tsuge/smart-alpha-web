@@ -9,6 +9,7 @@
     "lint": "yarn eslint . --ext .js,.ts,.vue"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "vue": "3.2.1"
   },
   "devDependencies": {
