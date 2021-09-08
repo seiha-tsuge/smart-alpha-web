@@ -10,12 +10,13 @@ export const Repository = (resource: string) => {
     get() {
       return repository.get(`${resource}`);
     },
-    post(id: number, payload: any) {
-      return repository.post(`${resource}/${id}`, payload);
+
+    post(payload: any) {
+      return repository.post(`${resource}`, payload);
     },
 
     put(id: number, payload: any) {
-      return repository.post(`${resource}/${id}`, payload);
+      return repository.put(`${resource}/${id}`, payload);
     },
 
     patch(id: number, payload: any) {
