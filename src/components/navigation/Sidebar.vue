@@ -41,19 +41,16 @@ import AIcon from '../atoms/icon/AIcon.vue';
 
 <style module>
 .sidebar {
-  grid-area: sidebar;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 3.6rem 0.1rem 3.6rem 3.6rem 0.1rem 3.6rem 3.6rem 3.6rem 0.1rem;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.2rem;
+  column-gap: 1.2rem;
   font-size: 1.4rem;
   background-color: var(--color-white);
 }
 
 .border {
-  border-bottom: solid;
-  border-width: 0.1rem;
-  border-color: var(--border-color);
+  border: var(--border);
 }
 
 .column {
