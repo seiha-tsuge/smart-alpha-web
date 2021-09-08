@@ -5,17 +5,9 @@
   </LayoutHeader>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script setup lang="ts">
 import LayoutHeader from '../layout/LayoutHeader.vue';
 import AIcon from '../atoms/icon/AIcon.vue';
-
-export default defineComponent({
-  components: {
-    LayoutHeader,
-    AIcon,
-  },
-});
 </script>
 
 <style module>
