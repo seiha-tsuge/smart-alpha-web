@@ -2,7 +2,9 @@
   <LayoutContainer>
     <Header />
     <LayoutSidebar></LayoutSidebar>
-    <LayoutMain> <router-view></router-view></LayoutMain>
+    <LayoutMain>
+      <router-view />
+    </LayoutMain>
   </LayoutContainer>
 </template>
 
