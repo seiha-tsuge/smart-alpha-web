@@ -1,4 +1,6 @@
-import type { AxiosRequestConfig, AxiosInstance, AxiosResponse } from 'axios';
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import axios from 'axios';
 
 const repository = axios.create({
