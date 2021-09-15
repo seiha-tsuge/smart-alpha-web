@@ -10,11 +10,14 @@ import WatchLaterList from '../views/WatchLaterList.vue';
 export const router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: '/favorite', component: FavoriteList },
-    { path: '/financial', component: FinancialResultsDetails },
-    { path: '/home', component: Home },
-    { path: '/userfavorite', component: UserFavoriteList },
-    { path: '/userwatchlater', component: UserWatchLaterList },
-    { path: '/watchlater', component: WatchLaterList },
+    { path: '/financial-results', component: Home, alias: '/' },
+    {
+      path: '/financial-results/:id',
+      component: FinancialResultsDetails,
+    },
+    { path: '/favorites', component: FavoriteList },
+    { path: '/favorites/users', component: UserFavoriteList },
+    { path: '/watch-later', component: WatchLaterList },
+    { path: '/watch-later/users', component: UserWatchLaterList },
   ],
 });
