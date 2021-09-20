@@ -45,12 +45,11 @@ import AIcon from '../atoms/icon/AIcon.vue';
 
 .items {
   border-bottom: var(--border);
-  padding-left: 1.2rem;
 }
 
 .item {
   font-size: 1.4rem;
-  padding: 1.2rem;
+  padding: 1.2rem 1.2rem 1.2rem 2.4rem;
   display: flex;
   column-gap: 2.4rem;
 }
