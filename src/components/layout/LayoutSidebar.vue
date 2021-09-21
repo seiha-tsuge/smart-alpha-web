@@ -17,8 +17,8 @@
       </div>
     </div>
     <div :class="$style.items">
-      <div :class="$style.label">
-        <p>他のユーザー</p>
+      <div :class="$style.item">
+        <p :class="$style.label">他のユーザー</p>
       </div>
       <div :class="$style.item">
         <AIcon :icon="'star_border'" />
@@ -49,16 +49,13 @@ import AIcon from '../atoms/icon/AIcon.vue';
 
 .item {
   font-size: 1.4rem;
-  padding: 1.2rem 1.2rem 1.2rem 2.4rem;
+  padding: 1.2rem 2.4rem;
   display: flex;
   column-gap: 2.4rem;
 }
 
 .label {
-  display: flex;
-  column-gap: 2.4rem;
   font-size: 1.2rem;
-  padding: 1.2rem;
 }
 
 @media screen and (max-width: 576px) {
