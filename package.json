@@ -6,12 +6,15 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
-    "lint": "yarn eslint . --ext .js,.ts,.vue"
+    "lint": "yarn eslint . --ext .js,.ts,.vue",
+    "test": "jest"
   },
   "dependencies": {
     "vue": "3.2.1"
   },
   "devDependencies": {
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.13",
     "@typescript-eslint/eslint-plugin": "4.29.1",
     "@typescript-eslint/parser": "4.29.1",
     "@vitejs/plugin-vue": "^1.4.0",
@@ -19,13 +22,15 @@
     "eslint": "7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-vue": "7.16.0",
+    "jest": "^27.1.1",
     "prettier": "2.3.2",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-recess-order": "^2.4.0",
     "stylelint-config-standard": "^22.0.0",
     "stylelint-prettier": "^1.2.0",
-    "typescript": "4.3.5",
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.3.5",
     "vite": "2.4.4",
     "vue-eslint-parser": "7.10.0",
     "vue-tsc": "^0.0.24"
