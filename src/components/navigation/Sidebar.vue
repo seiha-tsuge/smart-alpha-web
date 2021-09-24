@@ -1,13 +1,71 @@
 <template>
-  <LayoutSidebar :class="$style.header"><slot /></LayoutSidebar>
+  <aside :class="$style.sidebar">
+    <div :class="$style.items">
+      <div :class="$style.item">
+        <AIcon :icon="'business'" />
+        <p>決算速報</p>
+      </div>
+    </div>
+    <div :class="$style.items">
+      <div :class="$style.item">
+        <AIcon :icon="'star_border'" />
+        <p>お気に入り</p>
+      </div>
+      <div :class="$style.item">
+        <AIcon :icon="'schedule'" />
+        <p>後で見る</p>
+      </div>
+    </div>
+    <div :class="$style.items">
+      <div :class="$style.item">
+        <p :class="$style.label">他のユーザー</p>
+      </div>
+      <div :class="$style.item">
+        <AIcon :icon="'star_border'" />
+        <p>お気に入り</p>
+      </div>
+      <div :class="$style.item">
+        <AIcon :icon="'schedule'" />
+        <p>後で見る</p>
+      </div>
+    </div>
+  </aside>
 </template>
 
 <script setup lang="ts">
-import LayoutSidebar from '../layout/LayoutSidebar.vue';
+import AIcon from '../atoms/icon/AIcon.vue';
 </script>
 
 <style module>
 .sidebar {
   grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+}
+
+.items {
+  border-bottom: var(--border);
+}
+
+.item {
+  font-size: 1.4rem;
+  padding: 1.2rem 2.4rem;
+  display: flex;
+  column-gap: 2.4rem;
+}
+
+.label {
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 576px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    z-index: var(--z-index-sidebar);
+    width: 75%;
+    height: 100vh;
+  }
 }
 </style>
