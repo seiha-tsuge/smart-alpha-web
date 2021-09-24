@@ -1,33 +1,33 @@
 <template>
   <aside :class="$style.sidebar">
     <div :class="$style.items">
-      <div :class="$style.item">
+      <router-link :to="{ name: 'FinancialResults' }" :class="$style.item">
         <AIcon :icon="'business'" />
         <p>決算速報</p>
-      </div>
+      </router-link>
     </div>
     <div :class="$style.items">
-      <div :class="$style.item">
+      <router-link :to="{ name: 'FavoriteList' }" :class="$style.item">
         <AIcon :icon="'star_border'" />
         <p>お気に入り</p>
-      </div>
-      <div :class="$style.item">
+      </router-link>
+      <router-link :to="{ name: 'WatchLaterList' }" :class="$style.item">
         <AIcon :icon="'schedule'" />
         <p>後で見る</p>
-      </div>
+      </router-link>
     </div>
     <div :class="$style.items">
       <div :class="$style.item">
         <p :class="$style.label">他のユーザー</p>
       </div>
-      <div :class="$style.item">
+      <router-link :to="{ name: 'UserFavoriteList' }" :class="$style.item">
         <AIcon :icon="'star_border'" />
         <p>お気に入り</p>
-      </div>
-      <div :class="$style.item">
+      </router-link>
+      <router-link :to="{ name: 'UserWatchLaterList' }" :class="$style.item">
         <AIcon :icon="'schedule'" />
         <p>後で見る</p>
-      </div>
+      </router-link>
     </div>
   </aside>
 </template>
