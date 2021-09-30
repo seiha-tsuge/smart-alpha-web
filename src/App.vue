@@ -10,7 +10,7 @@
 
 <script setup lang="ts">
 import LayoutContainer from './components/layout/LayoutContainer.vue';
-import Header from './components/organisms/Header.vue';
+import Header from './components/navigation/Header.vue';
 import Sidebar from './components/navigation/Sidebar.vue';
 import LayoutMain from './components/layout/LayoutMain.vue';
 </script>
