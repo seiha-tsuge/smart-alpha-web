@@ -45,7 +45,7 @@ import AIcon from '../atoms/icon/AIcon.vue';
 }
 
 .items {
-  border-bottom: var(--border);
+  border-bottom: var(--border-solid);
 }
 
 .item {
