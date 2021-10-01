@@ -9,7 +9,7 @@ import type { PropType } from 'vue';
 import { defineProps } from 'vue';
 
 import type { RouteParams } from 'vue-router';
-import type { RouteNames } from '../router/types';
+import type { RouteNames } from '../../router/types';
 
 defineProps({
   name: {
