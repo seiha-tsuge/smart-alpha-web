@@ -23,6 +23,7 @@ Visual Studio Code に、以下の拡張機能をインストールします。
 | 拡張機能                                                                                                               | インストール条件                  |
 | ---------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
 | [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)                                   | 必須                              |
+| [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)                            | 必須                              |
 | [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)                | 必須                              |
 | [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)                                       | 必須                              |
 | [Vite](https://marketplace.visualstudio.com/items?itemName=antfu.vite)                                                 | 任意                              |
