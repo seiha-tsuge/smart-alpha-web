@@ -3,7 +3,7 @@
     <Header />
     <a-layout>
       <Sidebar />
-      <a-layout-content>Content</a-layout-content>
+      <a-layout-content><router-view /></a-layout-content>
     </a-layout>
   </a-layout>
 </template>
