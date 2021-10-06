@@ -4,4 +4,5 @@ export type RouteNames =
   | 'FavoriteList'
   | 'UserFavoriteList'
   | 'WatchLaterList'
-  | 'UserWatchLaterList';
+  | 'UserWatchLaterList'
+  | 'Login';

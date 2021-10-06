@@ -33,7 +33,7 @@
 </template>
 
 <script setup lang="ts">
-import AIcon from '../atoms/icon/AIcon.vue';
+import AIcon from '../general/icon/AIcon.vue';
 </script>
 
 <style module>
