@@ -1,16 +1,14 @@
 <template>
-  <LayoutContainer>
+  <a-layout>
     <Header />
-    <Sidebar />
-    <LayoutMain>
-      <router-view />
-    </LayoutMain>
-  </LayoutContainer>
+    <a-layout>
+      <Sidebar />
+      <a-layout-content><router-view /></a-layout-content>
+    </a-layout>
+  </a-layout>
 </template>
 
 <script setup lang="ts">
-import LayoutContainer from './components/layout/LayoutContainer.vue';
 import Header from './components/navigation/Header.vue';
 import Sidebar from './components/navigation/Sidebar.vue';
-import LayoutMain from './components/layout/LayoutMain.vue';
 </script>
