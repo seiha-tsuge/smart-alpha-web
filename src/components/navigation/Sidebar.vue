@@ -33,14 +33,14 @@
 </template>
 
 <script setup lang="ts">
-import AIcon from '../atoms/icon/AIcon.vue';
+import AIcon from '../general/icon/AIcon.vue';
 </script>
 
 <style module>
 .sidebar {
-  grid-area: sidebar;
   display: flex;
   flex-direction: column;
+  grid-area: sidebar;
   background-color: var(--color-white);
 }
 
@@ -49,10 +49,10 @@ import AIcon from '../atoms/icon/AIcon.vue';
 }
 
 .item {
-  font-size: 1.4rem;
-  padding: 1.2rem 2.4rem;
   display: flex;
   column-gap: 2.4rem;
+  padding: 1.2rem 2.4rem;
+  font-size: 1.4rem;
 }
 
 .label {
