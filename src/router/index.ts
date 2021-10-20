@@ -6,6 +6,7 @@ import Home from '../views/Home.vue';
 import UserFavoriteList from '../views/UserFavoriteList.vue';
 import UserWatchLaterList from '../views/UserWatchLaterList.vue';
 import WatchLaterList from '../views/WatchLaterList.vue';
+import Login from '../views/Login.vue';
 
 export const router = createRouter({
   history: createWebHistory(),
@@ -39,6 +40,11 @@ export const router = createRouter({
       path: '/watch-later/users',
       component: UserWatchLaterList,
       name: 'UserWatchLaterList',
+    },
+    {
+      path: '/login',
+      component: Login,
+      name: 'Login',
     },
   ],
 });

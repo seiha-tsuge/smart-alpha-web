@@ -1,7 +1,10 @@
 <template>
   <LayoutHeader :class="$style.header">
     <AIcon icon="menu" />
-    <div>login</div>
+
+    <a-button type="text"
+      ><router-link :to="{ name: 'Login' }">Login</router-link></a-button
+    >
   </LayoutHeader>
 </template>
 
