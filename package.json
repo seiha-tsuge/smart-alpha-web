@@ -7,7 +7,7 @@
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
     "lint": "yarn eslint . --ext .js,.ts,.vue",
-    "test": "jest"
+    "test:jest": "jest"
   },
   "dependencies": {
     "ant-design-vue": "^2.2.8",
