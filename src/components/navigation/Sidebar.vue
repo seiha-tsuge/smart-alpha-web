@@ -1,35 +1,46 @@
 <template>
-  <aside :class="$style.sidebar">
-    <div :class="$style.items">
-      <router-link :to="{ name: 'FinancialResults' }" :class="$style.item">
-        <AIcon :icon="'business'" />
-        <p>決算速報</p>
-      </router-link>
-    </div>
-    <div :class="$style.items">
-      <router-link :to="{ name: 'FavoriteList' }" :class="$style.item">
-        <AIcon :icon="'star_border'" />
-        <p>お気に入り</p>
-      </router-link>
-      <router-link :to="{ name: 'WatchLaterList' }" :class="$style.item">
-        <AIcon :icon="'schedule'" />
-        <p>後で見る</p>
-      </router-link>
-    </div>
-    <div :class="$style.items">
-      <div :class="$style.item">
+  <a-layout-sider
+    v-model:collapsed="collapsed"
+    :class="$style.sidebar"
+    :trigger="null"
+    collapsible
+  >
+    <a-menu>
+      <a-menu-item :class="$style.items">
+        <router-link :to="{ name: 'FinancialResults' }" :class="$style.item">
+          <AIcon :icon="'business'" />
+          <p>決算速報</p>
+        </router-link>
+      </a-menu-item>
+      <a-menu-item :class="$style.items">
+        <router-link :to="{ name: 'FavoriteList' }" :class="$style.item">
+          <AIcon :icon="'star_border'" />
+          <p>お気に入り</p>
+        </router-link>
+      </a-menu-item>
+      <a-menu-item>
+        <router-link :to="{ name: 'WatchLaterList' }" :class="$style.item">
+          <AIcon :icon="'schedule'" />
+          <p>後で見る</p>
+        </router-link>
+      </a-menu-item>
+      <a-menu-item :class="$style.item">
         <p :class="$style.label">他のユーザー</p>
-      </div>
-      <router-link :to="{ name: 'UserFavoriteList' }" :class="$style.item">
-        <AIcon :icon="'star_border'" />
-        <p>お気に入り</p>
-      </router-link>
-      <router-link :to="{ name: 'UserWatchLaterList' }" :class="$style.item">
-        <AIcon :icon="'schedule'" />
-        <p>後で見る</p>
-      </router-link>
-    </div>
-  </aside>
+      </a-menu-item>
+      <a-menu-item>
+        <router-link :to="{ name: 'UserFavoriteList' }" :class="$style.item">
+          <AIcon :icon="'star_border'" />
+          <p>お気に入り</p>
+        </router-link>
+      </a-menu-item>
+      <a-menu-item>
+        <router-link :to="{ name: 'UserWatchLaterList' }" :class="$style.item">
+          <AIcon :icon="'schedule'" />
+          <p>後で見る</p>
+        </router-link>
+      </a-menu-item>
+    </a-menu>
+  </a-layout-sider>
 </template>
 
 <script setup lang="ts">
