@@ -51,6 +51,7 @@ import AIcon from '../general/icon/AIcon.vue';
 .sidebar {
   display: flex;
   flex-direction: column;
+  grid-area: sidebar;
   background-color: var(--color-white);
 }
 
