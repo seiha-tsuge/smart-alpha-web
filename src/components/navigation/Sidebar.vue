@@ -45,6 +45,14 @@
 
 <script setup lang="ts">
 import AIcon from '../general/icon/AIcon.vue';
+// import { ref } from 'vue';
+// let collapsed = ref<boolean>(false);
+
+// import use from './useHoge.ts';
+// const { hoge, collapsed } = use();
+
+import { inject } from 'vue';
+const collapsed = inject('collapsed');
 </script>
 
 <style module>
