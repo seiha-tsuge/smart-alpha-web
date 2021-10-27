@@ -5,10 +5,22 @@
   --color-gray-dark: #969798;
   --color-gray-darker: #6f7070;
   --color-black: #212122;
+  --color-primary-light: #d4e8fa;
   --color-primary: #0ea5e9;
+  --color-primary-dark: #20506d;
+  --color-secondary-light: #ffcec9;
   --color-secondary: #e90e37;
+  --color-secondary-dark: #701b1f;
+  --color-info-light: #d9f4fe;
   --color-info: #2fd2fb;
+  --color-info-dark: #286375;
+  --color-warning-light: #fdf3d5;
   --color-warning: #e7d156;
+  --color-warning-dark: #6e632e;
+  --color-success-light: #d9f8da;
   --color-success: #4adf6e;
+  --color-success-dark: #2d6938;
+  --color-error-light: #ffd7d6;
   --color-error: #eb5964;
+  --color-error-dark: #703033;
 }
