@@ -17,10 +17,13 @@ import Sidebar from './components/navigation/Sidebar.vue';
 // const collapsed = ref<boolean>(true);
 // provide('collapsed', collapsed);
 
+// tsファイルから変数を取得した場合
+// import useCollapse from './composable/useCollapse.ts';
+// const { toggle, collapsed } = useCollapse();
+
+// 変数をApp.vueで定義した場合
 import { ref } from 'vue';
 import { provide } from 'vue';
-import useCollapse from './composable/useCollapse.ts';
-
-const { toggle, collapsed } = useCollapse();
+const collapsed = ref<boolean>(true);
 provide('collapsed', collapsed);
 </script>

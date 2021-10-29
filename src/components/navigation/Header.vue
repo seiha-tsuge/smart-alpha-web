@@ -24,9 +24,14 @@ import AIcon from '../general/icon/AIcon.vue';
 import { provide } from 'vue';
 import { inject } from 'vue';
 import useCollapse from '../../composable/useCollapse.ts';
-const { toggle, a } = useCollapse();
+
 const collapsed = inject('collapsed');
-provide('collapsed');
+const { toggle } = useCollapse(collapsed);
+provide('collapsed', collapsed);
+
+// const toggle = () => {
+//   collapsed.value = !collapsed.value;
+// };
 </script>
 
 <style module>
