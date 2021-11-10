@@ -1,8 +1,6 @@
 <template>
   <a-layout-header :class="$style.header">
-    <!-- <p>{{ collapsed }}</p> -->
-    <AIcon v-if="collapsed" icon="menu" class="trigger" @click="toggle()" />
-    <AIcon v-else class="trigger" icon="business" @click="toggle()" />
+    <AIcon icon="menu" class="trigger" @click="toggle()" />
     <a-button type="text">
       <router-link :to="{ name: 'Login' }">Login</router-link>
     </a-button>
