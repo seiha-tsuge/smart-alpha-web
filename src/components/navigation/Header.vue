@@ -11,16 +11,6 @@
 
 <script setup lang="ts">
 import AIcon from '../general/icon/AIcon.vue';
-
-// import { ref } from 'vue';
-// let collapsed = ref<boolean>(true);
-
-// import use from './useHoge.ts';
-// const { hoge, collapsed } = use();
-
-// import { provide } from 'vue';
-// provide('collapsed', collapsed);
-
 import { provide } from 'vue';
 import { inject } from 'vue';
 import useCollapse from '../../composable/useCollapse.ts';
@@ -28,10 +18,6 @@ import useCollapse from '../../composable/useCollapse.ts';
 const collapsed = inject('collapsed');
 const { toggle } = useCollapse(collapsed);
 provide('collapsed', collapsed);
-
-// const toggle = () => {
-//   collapsed.value = !collapsed.value;
-// };
 </script>
 
 <style module>

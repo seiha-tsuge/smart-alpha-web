@@ -11,19 +11,9 @@
 <script setup lang="ts">
 import Header from './components/navigation/Header.vue';
 import Sidebar from './components/navigation/Sidebar.vue';
-
-// import { ref } from 'vue';
-// import { provide } from 'vue';
-// const collapsed = ref<boolean>(true);
-// provide('collapsed', collapsed);
-
-// tsファイルから変数を取得した場合
-// import useCollapse from './composable/useCollapse.ts';
-// const { toggle, collapsed } = useCollapse();
-
-// 変数をApp.vueで定義した場合
 import { ref } from 'vue';
 import { provide } from 'vue';
+
 const collapsed = ref<boolean>(true);
 provide('collapsed', collapsed);
 </script>
