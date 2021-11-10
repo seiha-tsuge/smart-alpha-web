@@ -11,9 +11,7 @@
 <script setup lang="ts">
 import Header from './components/navigation/Header.vue';
 import Sidebar from './components/navigation/Sidebar.vue';
-import { ref } from 'vue';
-import { provide } from 'vue';
+import { ref, provide } from 'vue';
 
-const collapsed = ref<boolean>(true);
-provide('collapsed', collapsed);
+provide('collapsed', ref(false));
 </script>
