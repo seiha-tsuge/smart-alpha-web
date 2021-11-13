@@ -1,12 +1,30 @@
-import { ref } from 'vue';
+import { inject, InjectionKey, provide, reactive, readonly } from 'vue';
 
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types, @typescript-eslint/explicit-function-return-type
-export default function useCollapse(collapsed: ref) {
-  const toggle = () => {
-    collapsed.value = !collapsed.value;
-  };
+const state = reactive({
+  collapsed: false,
+});
 
-  return {
-    toggle,
-  };
+const toggle = (): void => {
+  state.collapsed = !state.collapsed;
+};
+
+const store = {
+  state: readonly(state),
+  toggle,
+};
+
+const injectionKey: InjectionKey<any> = Symbol('collapse-key');
+
+export function provideCollapse(): void {
+  provide(injectionKey, store);
+}
+
+export function useCollapse() {
+  const store = inject(injectionKey);
+
+  if (!store) {
+    throw new Error('provideCollapse must be called before useCollapse');
+  }
+
+  return store;
 }

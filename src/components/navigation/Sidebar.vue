@@ -1,6 +1,6 @@
 <template>
   <a-layout-sider
-    v-model:collapsed="collapsed"
+    v-model:collapsed="state.collapsed"
     :class="$style.sidebar"
     :trigger="null"
     collapsible
@@ -44,10 +44,10 @@
 </template>
 
 <script setup lang="ts">
+import { useCollapse } from '../../composable/useCollapse';
 import AIcon from '../general/icon/AIcon.vue';
-import { inject } from 'vue';
 
-const collapsed = inject('collapsed');
+const { state } = useCollapse();
 </script>
 
 <style module>
