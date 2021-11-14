@@ -11,7 +11,7 @@
 <script setup lang="ts">
 import Header from './components/navigation/Header.vue';
 import Sidebar from './components/navigation/Sidebar.vue';
-import { ref, provide } from 'vue';
+import { provideCollapse } from './composable/useCollapse';
 
-provide('collapsed', ref(false));
+provideCollapse();
 </script>
