@@ -1,6 +1,6 @@
 <template>
   <a-layout-header :class="$style.header">
-    <AIcon icon="menu" class="trigger" @click="toggle" />
+    <AIcon icon="menu" @click="toggle" />
     <a-button type="text">
       <router-link :to="{ name: 'Login' }">Login</router-link>
     </a-button>
