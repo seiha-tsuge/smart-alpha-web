@@ -1,12 +1,16 @@
 <template>
-  <i class="material-icons-outlined" :class="[colors[color], sizes[size]]">
+  <i
+    class="material-icons-outlined"
+    :class="[colors[color], sizes[size]]"
+    @click="onClick"
+  >
     {{ icon }}
   </i>
 </template>
 
 <script setup lang="ts">
 import type { PropType } from 'vue';
-import { defineProps } from 'vue';
+import { defineProps, defineEmits } from 'vue';
 
 type Color = 'primary' | 'default';
 type Size = 'default' | 'small' | 'large';
@@ -25,6 +29,13 @@ defineProps({
     default: 'small',
   },
 });
+
+const emit = defineEmits<{
+  (event: 'click', e: Event): void;
+}>();
+const onClick = (e: Event) => {
+  emit('click', e);
+};
 </script>
 
 <style module="colors">
