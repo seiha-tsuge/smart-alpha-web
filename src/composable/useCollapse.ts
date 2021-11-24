@@ -1,5 +1,12 @@
 import { inject, InjectionKey, provide, reactive, readonly } from 'vue';
 
+type Store = {
+  state: {
+    readonly collapsed: boolean;
+  };
+  toggle: () => void;
+};
+
 const state = reactive({
   collapsed: false,
 });
@@ -13,13 +20,13 @@ const store = {
   toggle,
 };
 
-const injectionKey: InjectionKey<any> = Symbol('collapse-key');
+const injectionKey: InjectionKey<Store> = Symbol('collapse-key');
 
 export function provideCollapse(): void {
   provide(injectionKey, store);
 }
 
-export function useCollapse() {
+export function useCollapse(): Store {
   const store = inject(injectionKey);
 
   if (!store) {
