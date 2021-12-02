@@ -1,16 +1,16 @@
 <template>
   <a-layout>
-    <Header />
+    <TheHeader />
     <a-layout>
-      <Sidebar />
+      <TheSidebar />
       <a-layout-content><router-view /></a-layout-content>
     </a-layout>
   </a-layout>
 </template>
 
 <script setup lang="ts">
-import Header from './components/navigation/Header.vue';
-import Sidebar from './components/navigation/Sidebar.vue';
+import TheHeader from './components/navigation/TheHeader.vue';
+import TheSidebar from './components/navigation/TheSidebar.vue';
 import { provideCollapse } from './composable/useCollapse';
 
 provideCollapse();
