@@ -37,4 +37,18 @@ defineProps({
   background: var(--color-primary-dark);
   border-color: var(--color-primary-dark);
 }
+
+.secondary {
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+.secondary:hover,
+.secondary:focus {
+  background: var(--color-secondary-light);
+  border-color: var(--color-secondary-light);
+}
+.secondary:active {
+  background: var(--color-secondary-dark);
+  border-color: var(--color-secondary-dark);
+}
 </style>
