@@ -7,37 +7,37 @@
   >
     <a-menu>
       <a-menu-item :class="$style.items">
-        <router-link :to="{ name: 'FinancialResults' }" :class="$style.item">
+        <AppLink name="FinancialResults" :class="$style.item">
           <AIcon :icon="'business'" />
           <p>決算速報</p>
-        </router-link>
+        </AppLink>
       </a-menu-item>
       <a-menu-item :class="$style.items">
-        <router-link :to="{ name: 'FavoriteList' }" :class="$style.item">
+        <AppLink name="FavoriteList" :class="$style.item">
           <AIcon :icon="'star_border'" />
           <p>お気に入り</p>
-        </router-link>
+        </AppLink>
       </a-menu-item>
       <a-menu-item>
-        <router-link :to="{ name: 'WatchLaterList' }" :class="$style.item">
+        <AppLink name="WatchLaterList" :class="$style.item">
           <AIcon :icon="'schedule'" />
           <p>後で見る</p>
-        </router-link>
+        </AppLink>
       </a-menu-item>
       <a-menu-item :class="$style.item">
         <p :class="$style.label">他のユーザー</p>
       </a-menu-item>
       <a-menu-item>
-        <router-link :to="{ name: 'UserFavoriteList' }" :class="$style.item">
+        <AppLink name="UserFavoriteList" :class="$style.item">
           <AIcon :icon="'star_border'" />
           <p>お気に入り</p>
-        </router-link>
+        </AppLink>
       </a-menu-item>
       <a-menu-item>
-        <router-link :to="{ name: 'UserWatchLaterList' }" :class="$style.item">
+        <AppLink name="UserWatchLaterList" :class="$style.item">
           <AIcon :icon="'schedule'" />
           <p>後で見る</p>
-        </router-link>
+        </AppLink>
       </a-menu-item>
     </a-menu>
   </a-layout-sider>

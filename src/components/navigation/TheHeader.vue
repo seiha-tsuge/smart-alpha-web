@@ -2,7 +2,7 @@
   <a-layout-header :class="$style.header">
     <AIcon icon="menu" @click="toggle" />
     <a-button type="text">
-      <router-link :to="{ name: 'Login' }">Login</router-link>
+      <AppLink name="Login">Login</AppLink>
     </a-button>
   </a-layout-header>
 </template>
