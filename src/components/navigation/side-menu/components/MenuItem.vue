@@ -1,10 +1,10 @@
 <template>
-  <a-menu-item :class="$style.items">
+  <div :class="$style.items">
     <AppLink :name="linkName" :class="$style.item">
       <AIcon :icon="iconName" />
       <p>{{ label }}</p>
     </AppLink>
-  </a-menu-item>
+  </div>
 </template>
 
 <script setup lang="ts">
