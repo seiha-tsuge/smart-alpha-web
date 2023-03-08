@@ -1,11 +1,7 @@
-import '@/styles/globals.css';
 import { AppProvider } from '@/providers/app';
-import type { AppProps } from 'next/app';
+import type { AppPropsWithLayout } from '@/types/next';
 
-export default function App({ Component, pageProps }: AppProps) {
-  return (
-    <AppProvider>
-      <Component {...pageProps} />
-    </AppProvider>
-  );
+export default function App({ Component, pageProps }: AppPropsWithLayout) {
+  const getLayout = Component.getLayout ?? ((page) => page);
+  return <AppProvider>{getLayout(<Component {...pageProps} />)}</AppProvider>;
 }
