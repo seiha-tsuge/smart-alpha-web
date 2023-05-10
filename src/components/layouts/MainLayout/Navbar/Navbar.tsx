@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import Link from 'next/link';
 
-import { Navbar as MantineNavbar, ScrollArea, NavLink as MantineNavLink } from '@mantine/core';
+import { Navbar as MantineNavbar, NavLink as MantineNavLink, Tooltip } from '@mantine/core';
 import { IconBuilding, IconClockHour5, IconStar, IconUsers } from '@tabler/icons-react';
 
 import { useNavbarState } from '@/stores/hooks';
@@ -44,14 +44,18 @@ export const Navbar = () => {
     { label: '後で見る', href: '', icon: <IconClockHour5 /> },
     { label: '投資家情報', href: '', icon: <IconUsers /> },
   ].map((link) => {
-    return <NavLink key={link.label} {...link} />;
+    return navbarDisplayPreference === 'opened' ? (
+      <NavLink key={link.label} {...link} />
+    ) : (
+      <Tooltip key={link.label} label={link.label} position='right' withArrow>
+        <NavLink {...link} />
+      </Tooltip>
+    );
   });
 
   return (
     <MantineNavbar width={{ base: navbarDisplayPreference === 'opened' ? 260 : 64 }} px='sm' py='md'>
-      <MantineNavbar.Section grow component={ScrollArea}>
-        {NavLinks}
-      </MantineNavbar.Section>
+      <MantineNavbar.Section grow>{NavLinks}</MantineNavbar.Section>
     </MantineNavbar>
   );
 };
