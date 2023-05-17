@@ -7,6 +7,8 @@ import { IconBuilding, IconClockHour5, IconStar, IconUsers } from '@tabler/icons
 import { useNavbarState } from '@/stores/hooks';
 import { useHasMounted } from '@/hooks';
 
+import { ROUTE } from '@/consts';
+
 import { useStyles } from './Navbar.styles';
 
 interface NavLinkProps {
@@ -39,10 +41,10 @@ export const Navbar = () => {
   if (!hasMounted) return null;
 
   const NavLinks = [
-    { label: '決算速報', href: '', icon: <IconBuilding /> },
-    { label: 'お気に入り', href: '', icon: <IconStar /> },
-    { label: '後で見る', href: '', icon: <IconClockHour5 /> },
-    { label: '投資家情報', href: '', icon: <IconUsers /> },
+    { label: '決算速報', href: ROUTE.HOME, icon: <IconBuilding /> },
+    { label: 'お気に入り', href: ROUTE.FAVORITES, icon: <IconStar /> },
+    { label: '後で見る', href: ROUTE.WATCH_LATER, icon: <IconClockHour5 /> },
+    { label: '投資家情報', href: ROUTE.INVESTOR_INFO, icon: <IconUsers /> },
   ].map((link) => {
     return navbarDisplayPreference === 'opened' ? (
       <NavLink key={link.label} {...link} />
