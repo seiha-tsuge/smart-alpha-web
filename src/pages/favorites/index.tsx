@@ -1,9 +1,7 @@
-import React from 'react';
-
 import { getLayout } from '@/components/layouts/MainLayout';
 
 const FavoritesPage = () => {
-  return <div>FavoritesPage</div>;
+  return <>FavoritesPage</>;
 };
 
 FavoritesPage.getLayout = getLayout;
