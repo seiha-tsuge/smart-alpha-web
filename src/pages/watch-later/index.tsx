@@ -1,7 +1,9 @@
-import React from 'react';
+import { getLayout } from '@/components/layouts/MainLayout';
 
 const WatchLaterPage = () => {
-  return <div>WatchLaterPage</div>;
+  return <>WatchLaterPage</>;
 };
+
+WatchLaterPage.getLayout = getLayout;
 
 export default WatchLaterPage;
