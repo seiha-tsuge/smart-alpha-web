@@ -1,6 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 
+import { FinancialResults } from '@/components/pages/financial-results';
+
 import { getLayout } from '@/components/layouts/MainLayout';
 
 export const HomePage = () => {
@@ -12,7 +14,8 @@ export const HomePage = () => {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <div>HomePage</div>
+
+      <FinancialResults />
     </>
   );
 };

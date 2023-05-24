@@ -1,6 +1,9 @@
 import * as React from 'react';
 
+import 'dayjs/locale/ja';
+
 import { MantineProvider } from '@mantine/core';
+import { DatesProvider } from '@mantine/dates';
 
 import { Noto_Sans_JP } from '@next/font/google';
 
@@ -21,7 +24,7 @@ export const AppProvider = ({ children }: AppProviderProps) => {
         headings: { fontFamily },
       }}
     >
-      {children}
+      <DatesProvider settings={{ locale: 'ja' }}>{children}</DatesProvider>
     </MantineProvider>
   );
 };
