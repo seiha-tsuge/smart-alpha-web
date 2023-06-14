@@ -1,11 +1,12 @@
 import React from 'react';
 
-import { DateHeader } from '@/objects/financial-results/components/list';
+import { DateHeader, DataTable } from '@/objects/financial-results/components/list';
 
 export const FinancialResults = () => {
   return (
     <div>
       <DateHeader />
+      <DataTable />
     </div>
   );
 };
