@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { AppShell } from '@mantine/core';
+import { AppShell } from '@/components/shared';
 
 import { Header } from './Header';
 import { Navbar } from './Navbar';
