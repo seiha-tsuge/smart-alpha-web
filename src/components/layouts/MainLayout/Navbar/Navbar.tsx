@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import Link from 'next/link';
 
-import { Navbar as MantineNavbar, NavLink as MantineNavLink, Tooltip } from '@mantine/core';
+import { Navbar as UINavbar, NavLink as UINavLink, Tooltip } from '@/components/shared';
 import { IconBuilding, IconClockHour5, IconStar, IconUsers } from '@tabler/icons-react';
 
 import { useNavbarState } from '@/stores/hooks';
@@ -20,7 +20,7 @@ interface NavLinkProps {
 const NavLink = forwardRef<HTMLAnchorElement, NavLinkProps>(({ label, href, icon }, ref) => {
   const { classes } = useStyles();
   return (
-    <MantineNavLink
+    <UINavLink
       ref={ref}
       component={Link}
       href={href}
@@ -56,8 +56,8 @@ export const Navbar = () => {
   });
 
   return (
-    <MantineNavbar width={{ base: navbarDisplayPreference === 'opened' ? 260 : 64 }} px='sm' py='md'>
-      <MantineNavbar.Section grow>{NavLinks}</MantineNavbar.Section>
-    </MantineNavbar>
+    <UINavbar width={{ base: navbarDisplayPreference === 'opened' ? 260 : 64 }} px='sm' py='md'>
+      <UINavbar.Section grow>{NavLinks}</UINavbar.Section>
+    </UINavbar>
   );
 };
