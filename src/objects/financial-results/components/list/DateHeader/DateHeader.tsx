@@ -1,8 +1,7 @@
 import React from 'react';
 
-import { Group, ActionIcon } from '@mantine/core';
-import { DatePickerInput } from '@mantine/dates';
-import { IconChevronLeft, IconChevronRight } from '@tabler/icons-react';
+import { Group, ActionIcon, DatePickerInput } from '@/components/shared';
+import { IconChevronLeft, IconChevronRight, IconCalendarEvent } from '@/components/icons';
 
 import { useFinancialResultsQueryForm } from '@/objects/financial-results/hooks/form';
 
