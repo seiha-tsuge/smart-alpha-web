@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 import Link from 'next/link';
 
 import { Navbar as UINavbar, NavLink as UINavLink, Tooltip } from '@/components/shared';
-import { IconBuilding, IconClockHour5, IconStar, IconUsers } from '@tabler/icons-react';
+import { IconBuilding, IconClockHour5, IconStar, IconUsers } from '@/components/icons';
 
 import { useNavbarState } from '@/stores/hooks';
 import { useHasMounted } from '@/hooks';

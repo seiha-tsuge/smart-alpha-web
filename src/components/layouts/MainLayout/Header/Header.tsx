@@ -1,8 +1,7 @@
 import React from 'react';
 
 import { Flex, ActionIcon, UnstyledButton, Header as UIHeader } from '@/components/shared';
-
-import { IconMenu2 } from '@tabler/icons-react';
+import { IconMenu2 } from '@/components/icons';
 
 import { useNavbarState } from '@/stores/hooks';
 
