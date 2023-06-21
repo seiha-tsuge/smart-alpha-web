@@ -1,5 +1,5 @@
-import { Header as MantineHeader } from '@mantine/core';
-import type { HeaderProps as MantineHeaderProps } from '@mantine/core';
+import { Header } from '@mantine/core';
+import type { HeaderProps } from '@mantine/core';
 
-export const Header = MantineHeader;
-export type HeaderProps = MantineHeaderProps;
+export { Header };
+export type { HeaderProps };
