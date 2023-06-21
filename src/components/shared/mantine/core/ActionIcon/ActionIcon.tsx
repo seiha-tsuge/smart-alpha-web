@@ -1,5 +1,5 @@
-import { ActionIcon as MantineActionIcon } from '@mantine/core';
-import type { ActionIconProps as MantineActionIconProps } from '@mantine/core';
+import { ActionIcon } from '@mantine/core';
+import type { ActionIconProps, ActionIconStylesNames, ActionIconStylesParams } from '@mantine/core';
 
-export const ActionIcon = MantineActionIcon;
-export type ActionIconProps = MantineActionIconProps;
+export { ActionIcon };
+export type { ActionIconProps, ActionIconStylesNames, ActionIconStylesParams };

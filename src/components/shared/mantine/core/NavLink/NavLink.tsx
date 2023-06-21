@@ -1,5 +1,5 @@
-import { NavLink as MantineNavLink } from '@mantine/core';
-import type { NavLinkProps as MantineNavLinkProps } from '@mantine/core';
+import { NavLink } from '@mantine/core';
+import type { NavLinkProps, NavLinkStylesNames, NavLinkStylesParams } from '@mantine/core';
 
-export const NavLink = MantineNavLink;
-export type NavLinkProps = MantineNavLinkProps;
+export { NavLink };
+export type { NavLinkProps, NavLinkStylesNames, NavLinkStylesParams };

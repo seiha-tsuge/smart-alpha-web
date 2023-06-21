@@ -1,5 +1,11 @@
-import { Tooltip as MantineTooltip } from '@mantine/core';
-import type { TooltipProps as MantineTooltipProps } from '@mantine/core';
+import { Tooltip } from '@mantine/core';
+import type {
+  TooltipProps,
+  TooltipStylesNames,
+  TooltipStylesParams,
+  TooltipFloatingProps,
+  TooltipGroupProps,
+} from '@mantine/core';
 
-export const Tooltip = MantineTooltip;
-export type TooltipProps = MantineTooltipProps;
+export { Tooltip };
+export type { TooltipProps, TooltipStylesNames, TooltipStylesParams, TooltipFloatingProps, TooltipGroupProps };

@@ -1,5 +1,5 @@
-import { DatePickerInput as MantineDatePickerInput } from '@mantine/dates';
-import type { DatePickerInputProps as MantineDatePickerInputProps } from '@mantine/dates';
+import { DatePickerInput } from '@mantine/dates';
+import type { DatePickerInputProps, DatePickerInputStylesNames } from '@mantine/dates';
 
-export const DatePickerInput = MantineDatePickerInput;
-export type DatePickerInputProps = MantineDatePickerInputProps;
+export { DatePickerInput };
+export type { DatePickerInputProps, DatePickerInputStylesNames };
