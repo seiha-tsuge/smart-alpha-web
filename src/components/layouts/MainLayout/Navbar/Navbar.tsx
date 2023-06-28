@@ -1,37 +1,10 @@
-import React, { forwardRef } from 'react';
-import Link from 'next/link';
+import React from 'react';
 
-import { Navbar as UINavbar, NavLink as UINavLink, Tooltip } from '@/components/shared';
-import { IconBuilding, IconClockHour5, IconStar, IconUsers } from '@/components/icons';
+import { Navbar as UINavbar } from '@/components/shared';
+import { NavLinks } from './NavLinks';
 
 import { useNavbarState } from '@/stores/hooks';
 import { useHasMounted } from '@/hooks';
-
-import { ROUTE } from '@/consts';
-
-import { useStyles } from './Navbar.styles';
-
-interface NavLinkProps {
-  label: string;
-  href: string;
-  icon: React.ReactNode;
-}
-
-const NavLink = forwardRef<HTMLAnchorElement, NavLinkProps>(({ label, href, icon }, ref) => {
-  const { classes } = useStyles();
-  return (
-    <UINavLink
-      ref={ref}
-      component={Link}
-      href={href}
-      label={label}
-      icon={icon}
-      styles={{ icon: { marginRight: '1.5rem' } }}
-      className={classes.navLink}
-    />
-  );
-});
-NavLink.displayName = 'NavLink';
 
 export const Navbar = () => {
   const { navbarDisplayPreference } = useNavbarState();
@@ -40,24 +13,13 @@ export const Navbar = () => {
   const hasMounted = useHasMounted();
   if (!hasMounted) return null;
 
-  const NavLinks = [
-    { label: '決算速報', href: ROUTE.HOME, icon: <IconBuilding /> },
-    { label: 'お気に入り', href: ROUTE.FAVORITES, icon: <IconStar /> },
-    { label: '後で見る', href: ROUTE.WATCH_LATER, icon: <IconClockHour5 /> },
-    { label: '投資家情報', href: ROUTE.INVESTOR_INFO, icon: <IconUsers /> },
-  ].map((link) => {
-    return navbarDisplayPreference === 'opened' ? (
-      <NavLink key={link.label} {...link} />
-    ) : (
-      <Tooltip key={link.label} label={link.label} position='right' withArrow>
-        <NavLink {...link} />
-      </Tooltip>
-    );
-  });
+  const isOpen = navbarDisplayPreference === 'opened';
 
   return (
-    <UINavbar width={{ base: navbarDisplayPreference === 'opened' ? 260 : 64 }} px='sm' py='md'>
-      <UINavbar.Section grow>{NavLinks}</UINavbar.Section>
+    <UINavbar width={{ base: isOpen ? 260 : 64 }} px='sm' py='md'>
+      <UINavbar.Section grow>
+        <NavLinks isOpen={isOpen} />
+      </UINavbar.Section>
     </UINavbar>
   );
 };
