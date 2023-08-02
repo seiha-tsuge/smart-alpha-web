@@ -21,7 +21,7 @@
     "@mantine/hooks": "^6.0.15",
     "@mantine/next": "^6.0.15",
     "@next/font": "13.4.7",
-    "@tabler/icons-react": "^2.23.0",
+    "@tabler/icons-react": "^2.30.0",
     "@types/node": "20.3.2",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
